@@ -1,6 +1,6 @@
-# API - TodoList
+# API - Weather Forecast
 
-A RESTful API for managing user authentication and todo notes, built with Node.js, TypeScript, MongoDB, and Redis using Hexagonal Architecture.
+A RESTful API for retrieving weather forecasts based on user-provided locations, built with Node.js, TypeScript, and Redis, following a Hexagonal Architecture. It integrates external geolocation and weather services and provides structured, cache-optimized responses for daily, hourly, and current forecasts.
 
 ---
 
