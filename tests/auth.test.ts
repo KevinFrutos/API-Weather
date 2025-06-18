@@ -34,6 +34,15 @@ jest.mock('../src/infrastructure/logging/sentry', () => {
     };
 });
 
+jest.mock("../src/infrastructure/http/utils/GeocodeMapsGeolocationService", () => {
+    return {
+        GeocodeMapsGeolocationService: jest.fn().mockImplementation(() => ({
+            getCoordinatesFromAddress: jest.fn().mockResolvedValue({ lat: "41.12", lon: "1.12" }),
+        })),
+    };
+});
+
+
 
 beforeAll(async () => {
     mongoServer = await MongoMemoryServer.create();
