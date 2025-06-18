@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const oneHourTTL = 3600;
+export const twelveHoursTTL = 43200;
 export const authTokenPrefix = 'auth-token';
 
 export class RedisCacheService implements ICacheService {
